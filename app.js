@@ -6,7 +6,11 @@ const app = express();
 const hostname = process.env.HOSTNAME ?? "localhost";
 const port = process.env.PORT ?? "5000";
 
-//GET
+//Middlewares
+
+//Connrcting with Database
+
+//GET //Routes
 app.get('/', (req, res) => {
     res.send('Heloooo worldd');
 })
