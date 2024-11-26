@@ -1,6 +1,7 @@
 // require('dotenv').config({ path: './.env.dev' }); // Ensure this points to your .env file
 
 const express = require('express');
+const connectDatabase = require('./src/config/dbconfig');
 const app = express();
 
 const hostname = process.env.HOSTNAME ?? "localhost";
@@ -9,6 +10,7 @@ const port = process.env.PORT ?? "5000";
 //Middlewares
 
 //Connrcting with Database
+connectDatabase();
 
 //GET //Routes
 app.get('/', (req, res) => {
